@@ -70,16 +70,25 @@ interface DocumentIntelligenceAdministrationClient {
 }
 
 @@clientName(AnalyzeBatchDocumentsRequest,
-  "AnalyzeBatchDocumentsContent",
+  "AnalyzeBatchDocumentsOptions",
   "csharp"
 );
-@@clientName(AnalyzeDocumentRequest, "AnalyzeDocumentContent", "csharp");
+@@clientName(AnalyzeBatchDocumentsRequest.azureBlobSource, "BlobSource", "csharp");
+@@clientName(AnalyzeBatchDocumentsRequest.azureBlobFileListSource, "BlobFileListSource", "csharp");
+@@clientName(AnalyzeBatchDocumentsRequest.resultContainerUrl, "ResultContainerUri", "csharp");
+@@clientName(AnalyzeBatchOperation, "AnalyzeBatchOperationDetails", "csharp");
+@@clientName(AnalyzeBatchOperation.createdDateTime, "CreatedOn", "csharp");
+@@clientName(AnalyzeBatchOperation.lastUpdatedDateTime, "LastUpdatedOn", "csharp");
+@@clientName(AnalyzeBatchOperationDetail, "AnalyzeBatchResultDetails", "csharp");
+@@clientName(AnalyzeBatchOperationDetail.resultUrl, "ResultUri", "csharp");
+@@clientName(AnalyzeBatchOperationDetail.sourceUrl, "SourceUri", "csharp");
+@@clientName(AnalyzeDocumentRequest, "AnalyzeDocumentOptions", "csharp");
 @@clientName(AnalyzeDocumentRequest.urlSource, "UriSource", "csharp");
 @@clientName(AuthorizeClassifierCopyRequest,
-  "AuthorizeClassifierCopyContent",
+  "AuthorizeClassifierCopyOptions",
   "csharp"
 );
-@@clientName(AuthorizeCopyRequest, "AuthorizeCopyContent", "csharp");
+@@clientName(AuthorizeCopyRequest, "AuthorizeModelCopyOptions", "csharp");
 @@clientName(AzureBlobContentSource, "BlobContentSource", "csharp");
 @@clientName(AzureBlobContentSource.containerUrl, "ContainerUri", "csharp");
 @@clientName(AzureBlobFileListContentSource,
@@ -90,15 +99,12 @@ interface DocumentIntelligenceAdministrationClient {
   "ContainerUri",
   "csharp"
 );
-@@clientName(BuildDocumentClassifierRequest,
-  "BuildDocumentClassifierContent",
-  "csharp"
-);
+@@clientName(BuildDocumentClassifierRequest, "BuildClassifierOptions", "csharp");
 @@clientName(BuildDocumentClassifierRequest.docTypes,
   "DocumentTypes",
   "csharp"
 );
-@@clientName(BuildDocumentModelRequest, "BuildDocumentModelContent", "csharp");
+@@clientName(BuildDocumentModelRequest, "BuildDocumentModelOptions", "csharp");
 @@clientName(BuildDocumentModelRequest.azureBlobSource, "BlobSource", "csharp");
 @@clientName(BuildDocumentModelRequest.azureBlobFileListSource,
   "BlobFileListSource",
@@ -116,12 +122,9 @@ interface DocumentIntelligenceAdministrationClient {
   "BlobFileListSource",
   "csharp"
 );
-@@clientName(ClassifyDocumentRequest, "ClassifyDocumentContent", "csharp");
+@@clientName(ClassifyDocumentRequest, "ClassifyDocumentOptions", "csharp");
 @@clientName(ClassifyDocumentRequest.urlSource, "UriSource", "csharp");
-@@clientName(ComposeDocumentModelRequest,
-  "ComposeDocumentModelContent",
-  "csharp"
-);
+@@clientName(ComposeDocumentModelRequest, "ComposeModelOptions", "csharp");
 @@clientName(ComposeDocumentModelRequest.docTypes, "DocumentTypes", "csharp");
 @@clientName(ContentSourceKind.azureBlob, "Blob", "csharp");
 @@clientName(ContentSourceKind.azureBlobFileList, "BlobFileList", "csharp");
@@ -147,13 +150,14 @@ interface DocumentIntelligenceAdministrationClient {
   "ModifiedOn",
   "csharp"
 );
+@@clientName(DocumentField.type, "FieldType", "csharp");
 @@clientName(DocumentField.valueArray, "ValueList", "csharp");
-@@clientName(DocumentField.valueInteger, "ValueLong", "csharp");
+@@clientName(DocumentField.valueInteger, "ValueInt64", "csharp");
 @@clientName(DocumentField.valueNumber, "ValueDouble", "csharp");
 @@clientName(DocumentField.valueObject, "ValueDictionary", "csharp");
 @@clientName(DocumentFieldSchema.type, "FieldType", "csharp");
 @@clientName(DocumentFieldType.array, "List", "csharp");
-@@clientName(DocumentFieldType.integer, "Long", "csharp");
+@@clientName(DocumentFieldType.integer, "Int64", "csharp");
 @@clientName(DocumentFieldType.number, "Double", "csharp");
 @@clientName(DocumentFieldType.object, "Dictionary", "csharp");
 @@clientName(DocumentModelDetails.azureBlobSource, "BlobSource", "csharp");
